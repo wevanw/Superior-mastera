@@ -44,7 +44,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapte
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         Log.d(TAG, "位置: " + position);
         final Goods goods = mGoodsList.get(position);
-        //将数据保存在itemView的Tag中，以便点击时进行获取
+        //save date in tag of itemView，for later use
         holder.itemView.setTag(goods);
         holder.goods_order.setText(String.valueOf(position + 1) + ".");
         holder.goods_name.setText(goods.getName());
@@ -91,7 +91,7 @@ public class ShoppingCartAdapter extends RecyclerView.Adapter<ShoppingCartAdapte
     }
 
 
-    //自定义的ViewHolder，持有每个Item的的所有界面元素
+    //define viewHolder  to hold every item's interface elements
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView goods_order;
         public TextView goods_name;
