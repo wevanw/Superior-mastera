@@ -10,7 +10,7 @@ import java.util.List;
 public class GoodsLitepal {
 
     /**
-     * 新建便签
+     *
      */
     public static void createNewGoods(Goods goods) {
         Goods newGoods = goods;
